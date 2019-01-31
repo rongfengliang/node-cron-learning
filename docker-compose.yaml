@@ -1,0 +1,9 @@
+ version: "3"
+ services:
+    cron:
+      image: dalongrong/cron-app:1.0
+      build:
+        context: ./
+        dockerfile: ./Dockerfile
+      volumes:
+      - "./app.js:/app/app.js"

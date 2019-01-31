@@ -1,0 +1,5 @@
+node_modules/**
+pm2-script-linux
+pm2-script-macos
+pm2-script-win.exe
+yarn.lock

@@ -1,0 +1,25 @@
+{
+  "name": "pm2-script",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": "app.js",
+  "dependencies": {
+    "cron": "^1.6.0"
+  },
+  "pkg": {
+    "scripts": [
+      "app.js"
+    ]
+  },
+  "scripts": {
+    "start": "node app.js",
+    "pm2": "pm2 start ecosystem.config.js",
+    "live-local":"nodemon --exec yarn pm2",
+    "pm2-docker": "pm2-runtime start ecosystem.config.js",
+    "live-docker": "nodemon --exec yarn pm2-docker"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
